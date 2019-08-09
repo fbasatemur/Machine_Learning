@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jul 18 21:34:39 2019
+
+@author: Monster
+"""
+P-value degerlerine gore parametrelerin elenmesi R-squre degerini yani tahmin basrisini arttirir
+yine ayni sekilde dusure de bilir
+Tek Parametreli (X Bagimsizi):
+
+Linear reg
+R-squared:                       0.942
+
+Polynomial Reg
+R-squared:                       0.759
+
+SVR 
+R-squared:                       0.770
+
+Decision Tree Reg
+R-squared:                       0.751
+
+Random Forest Reg
+R-squared:                       0.719
+
+
+3 Parametreli (X Bagimsizi):
+
+Linear reg
+R-squared:                       0.903
+
+Polynomial Reg
+R-squared:                       0.680
+
+SVR
+R-squared:                       0.782
+
+Decision Tree
+R-squared:                       0.679
+
+Random Forest Reg
+R-squared:                       0.713
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
