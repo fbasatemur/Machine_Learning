@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 11 09:19:06 2019
-
-@author: Monster
-"""
 
 import pandas as pd
 import numpy as np
@@ -14,6 +9,7 @@ eksikveriler = pd.read_csv('eksik_veriler.csv')
 
 from sklearn.preprocessing import Imputer # eksik veriler icin 
 
+# eksikleri doldurma yontemi -> 'mean'
 imputer = Imputer(missing_values="NaN",strategy = "mean",axis=0)
 
 Yasboykilo = eksikveriler.iloc[:,1:4].values       # yalnizca sayisal olan kolonlar alinir [satir:satir,kolon:kolon]
@@ -22,6 +18,7 @@ imputer = imputer.fit(Yasboykilo[:,1:4])   # her kolon icin ort hesapla
 Yasboykilo[:,1:4] = imputer.transform(Yasboykilo[:,1:4])  # parametre degisikligini uygula
 print(Yasboykilo)
 
+# categorical -> numeric transform
 from sklearn.preprocessing import OneHotEncoder
 
 ulke = veriler.iloc[:,0:1].values
