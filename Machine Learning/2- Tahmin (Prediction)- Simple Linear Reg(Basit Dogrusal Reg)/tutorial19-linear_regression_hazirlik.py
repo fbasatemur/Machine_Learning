@@ -2,7 +2,8 @@
 """
 Created on Fri Jul 12 09:35:53 2019
 
-@author: Monster
+Bu bolumde veri kumesinde bulunan aylara gore satislari predict edicez.
+Oncelikle preprocessing asamasindan baslayarak verileri uyygun hale getirelim.
 """
 # 1-kutuphaneler
 import pandas as pd
@@ -30,10 +31,11 @@ x_train, x_test, y_train, y_test = train_test_split(aylar,satislar,test_size = 0
 # literaturde test icin 1/3 iken train icin 2/3 kullanilir
 
 # verilerin olceklenmesi
-from sklearn.preprocessing import StandardScaler    # standartlastirma icin 
+from sklearn.preprocessing import StandardScaler    
 
+# standartlastirma
 sc = StandardScaler()           
-X_train = sc.fit_transform(x_train)     # standartlastirma 
+X_train = sc.fit_transform(x_train)      
 X_test = sc.fit_transform(x_test)
 
 
