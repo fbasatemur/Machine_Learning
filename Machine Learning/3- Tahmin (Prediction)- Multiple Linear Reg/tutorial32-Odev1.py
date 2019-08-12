@@ -2,9 +2,7 @@
 """
 Created on Mon Jul 15 19:19:11 2019
 
-@author: Monster
 
-ODEV1
 """
 
 import pandas as pd
