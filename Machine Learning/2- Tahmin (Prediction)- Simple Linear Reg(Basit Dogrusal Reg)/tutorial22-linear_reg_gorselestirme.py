@@ -2,7 +2,6 @@
 """
 Created on Sat Jul 13 00:17:05 2019
 
-@author: Monster
 """
 
 # 1-kutuphaneler
@@ -22,23 +21,22 @@ print (aylar)
 satislar = veriler[['Satislar']]
 print(satislar)
 
-# sklearn.cross_validation da kullanilan train_test_split, sklearn.model_selection 'a tasinmis
 # verilerin train ve test parcalamsi yapilir
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(aylar,satislar,test_size = 0.33, random_state = 0)   # s ve sonuc3 df mi parcalanmali
 # literaturde train icin 2/3 ve test icin 1/3 kullanilir
 # arguman olan aylar bagimsiz, satislar ise bagimli degiskenlerdir y = ax+b
 
-'''
-# verilerin olceklenmesi
-from sklearn.preprocessing import StandardScaler    # standartlastirma icin 
 
+# verilerin olceklenmesi
+from sklearn.preprocessing import StandardScaler    
+# standartlastirma 
 sc = StandardScaler()           
-X_train = sc.fit_transform(x_train)     # standartlastirma 
+X_train = sc.fit_transform(x_train)     
 X_test = sc.fit_transform(x_test)
 Y_train =sc.fit_transform(y_train)
 Y_test = sc.fit_transform(y_test) 
-'''
+
 # CRISP_DM de Modelleme
 # model insaa edilir (lineer regression)
 from sklearn.linear_model import LinearRegression
