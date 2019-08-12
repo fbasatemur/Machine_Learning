@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """
-test ve train klasorlerinde bulunan fotograflari kullanarak CNN ü kadin ve erkegi ayirt edebilecek sekilde egiterek sonuclari gormek
-
+train ve test veri kumesini http://www.bilkav.com/wp-content/uploads/2018/08/27CNN_Cinsiyet.zip icerisinden alinabilir.
+Burada train ve test klasorlerinde bulunan ornek fotograflari kullanarak, 
+CNN uzerinden kadin ve erkek tahminlerini ve bu tahminlerin dogrulugunu test edicez.
 """
 
 from keras.models import Sequential      # ANN tanimlama icin
@@ -56,12 +57,12 @@ train_datagen = ImageDataGenerator(rescale= 1./255,      # ayni islemi train_dat
                                    horizontal_flip= True)
 
 # test ve train setlere oku
-test_set = test_datagen.flow_from_directory('test_set',       # ayni dizindeki test verilerinin path i
+test_set = test_datagen.flow_from_directory('test_set',       # test_set -> ayni dizinde bulunan test fotograflarinin klasoru
                                                  target_size= (64,64),
                                                  batch_size= 1,
                                                  class_mode= 'binary')
 
-training_set = train_datagen.flow_from_directory('training_set',    
+training_set = train_datagen.flow_from_directory('training_set',    # training_set -> ayni dizinde bulunan trainin_set klasoru
                                                  target_size= (64,64),
                                                  batch_size= 1,
                                                  class_mode= 'binary')  
@@ -99,6 +100,7 @@ result ['file_names'] = file_names
 result ['predict'] = predict
 result ['test'] = test_labels
 
+# confusion matrix ile predict doruluguna bakalim
 from sklearn.metrics import confusion_matrix
 
 cm = confusion_matrix(test_labels, predict)
