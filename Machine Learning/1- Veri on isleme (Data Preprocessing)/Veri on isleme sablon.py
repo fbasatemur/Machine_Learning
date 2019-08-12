@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 12 09:35:53 2019
 
-@author: Monster
-"""
 # 1-kutuphaneler
 import pandas as pd
 import numpy as np
@@ -36,7 +32,7 @@ Yasboykilo[:,1:4] = imputer.transform(Yasboykilo[:,1:4])  # parametre degisiklig
 print(Yasboykilo)
 
 
-# encoder : Kategoric -> Numeric
+# encoder : Categorical -> Numeric
 
 ulke = veriler.iloc[:,0:1].values
 print(ulke)
