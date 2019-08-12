@@ -2,7 +2,7 @@
 """
 Created on Fri Jul 12 23:02:15 2019
 
-@author: Monster
+
 """
 
 # 1-kutuphaneler
@@ -31,16 +31,16 @@ x_train, x_test, y_train, y_test = train_test_split(aylar,satislar,test_size = 0
 # literaturde test icin 1/3 iken train icin 2/3 kullanilir
 
 # verilerin olceklenmesi
-from sklearn.preprocessing import StandardScaler    # standartlastirma icin 
-
+from sklearn.preprocessing import StandardScaler    
+# standartlastirma 
 sc = StandardScaler()           
-X_train = sc.fit_transform(x_train)     # standartlastirma 
+X_train = sc.fit_transform(x_train)     
 X_test = sc.fit_transform(x_test)
 Y_train =sc.fit_transform(y_train)
 Y_test = sc.fit_transform(y_test) 
 
 # CRISP_DM de Modelleme
-# model insaaa (lineer regression)
+# model insaasi (lineer regression)
 from sklearn.linear_model import LinearRegression
 
 lr = LinearRegression()
