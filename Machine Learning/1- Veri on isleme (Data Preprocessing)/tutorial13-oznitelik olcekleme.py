@@ -2,7 +2,11 @@
 """
 Created on Fri Jul 12 09:35:53 2019
 
-@author: Monster
+2 sütundan oluşan bir veri seti düşünelim.  1. sütun [1-10] arasında değerlere alırken , 2. sütun [1-10000] arasında değerler alsın. 
+Ağırlık (weight) 2.sütundaki hatalar daha büyük olacağından bu sütuna göre optmize edilecek ve algoritma daha fazla sürede işlemi tamamlayacaktır. 
+Bu ise egitimde sapma yapacaktir.
+Bunu engellemek icin StandardScaler kullanilir.
+ScandardScaler -> Ortalama ve birim varyansi kullanrak ölçeklendirme özelliklerini standartlaştırır.
 """
 # 1-kutuphaneler
 import pandas as pd
