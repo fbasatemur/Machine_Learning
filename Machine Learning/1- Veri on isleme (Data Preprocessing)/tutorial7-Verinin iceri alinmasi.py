@@ -13,8 +13,8 @@ import pandas as pd               # Dosyadan veri cekmek icin kullanilacak
 
 # csv -> comma sepporatted value
 datas = pd.read_csv('veriler.csv')    # parametre path ya da name olabiliir
+# datas = pd.read_csv("veriler.csv")  python ozelligi geregi "" da kullanilabilir
 
-# veriler = pd.read_csv("veriler.csv")  python ozelligi geregi "" da kullanilabilir
 
 print(datas)
 
