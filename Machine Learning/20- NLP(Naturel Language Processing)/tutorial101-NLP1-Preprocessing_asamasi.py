@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Aug  4 12:10:32 2019
 
-@author: Monster
-"""
 """
 
 NLP kullanarak Veri kumesinde bulunan yorumlar ile liked degerleri arasindaki iliskiyi makineye ogretmeye
